@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Ubuntu R';
+    src:url('../fonts/Ubuntu-R.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'LemonMilk';
+    src:url('../fonts/LemonMilk.otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body, html{
+	font-family:Ubuntu R;
+}
+.box-dash{
+    margin-top: 20px;
+}
+.bg-photo{
+    position: relative;
+    width: 100%;
+    height:250px 
+}
+#hov{
+    padding-top: 20px;
+    position: relative;
+    height:250px;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0,0,0,0.75);
+    transition-duration: 0.5s;
+}
+#hov:hover{
+    opacity: 1;
+}
+.avatar-admin{
+    position: relative;
+    border-radius: 100%;
+    height: 120px;
+    width: 120px;
+    border:2px solid white;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+.btn-view-delete-admin{
+    border-radius: 50px !important;
+    border:1.3px solid white !important;
+
+}
+.utama{
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: 568px;
+}
+.card{
+    height: 250px;
+}
+.card img{
+    height: 180px
+}
+.box-jurusan{
+	border-bottom: 4px solid #0d47a1;
+    height: 450px;
+}
+.carousel{
+    height: 500px;
+}
+.dropdown-content{
+	border-bottom:5px solid #0d47a1;
+}
+.owl-color{
+    margin-top: 10%;
+    height: auto;
+}
+.owl{
+ height: auto;
+}
+.photo-profile{
+    height:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.sosmed{
+  transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+}
+.sosmed:hover{
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media only screen and (max-width: 768px){
+    .owl-color{
+        margin-top: 5%;
+    }
+    .card img{
+        height:150px; 
+    }
+}
+@media only screen and (max-width: 1024px){
+    .owl-color{
+        margin-top: 25%;
+    }
+    .card img{
+        height: 120px
+    }
+
+}

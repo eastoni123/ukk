@@ -94,9 +94,6 @@ body, html{
     padding-bottom: 150px;
     min-height: 568px;
 }
-.card{
-    height: 250px;
-}
 .card img{
     height: 180px
 }

@@ -10,7 +10,7 @@ $query = mysql_query($sql);
 <!-- Main content -->
 <!-- Info boxes -->
 <div class="row">
-  <img src="../dist/img/Kipli.png" class="owl-color tooltipped col m2 s6 offset-s3" data-position="top" data-delay="50" data-tooltip="Halo <?php echo $nama ?>" >
+  <img src="../dist/img/Kipli.png" class="owl-color tooltipped col m2 s6 offset-s3" data-position="top" data-delay="50" data-tooltip="Halo <?php echo $_SESSION['nama_lengkap'] ?>" >
   <table class="striped z-depth-1 bordered centered responsive-table blue darken-4 col m10">
     <thead class="white-text">
       <tr>

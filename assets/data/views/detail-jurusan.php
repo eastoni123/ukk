@@ -12,7 +12,6 @@ $query = mysql_query($sql);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="../../component/css/eas-icon.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/style.css">
 	<style type="text/css">
 	.photo-detail{

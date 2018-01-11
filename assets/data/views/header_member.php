@@ -18,22 +18,15 @@ if(!isset($_SESSION['email'])){
   <link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../component/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../../component/css/eas-icon.css">
   <!-- Ionicons -->
   <!-- jvectormap -->
-  <link rel="stylesheet" href="../plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <link rel="stylesheet" type="text/css" href="../../component/css/style.css">
-  <!-- Theme style -->
-  <link href="../dist/css/jquery.tagsinput.css" rel="stylesheet" />
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     <!-- autocomplete -->
-    <link href="../dist/css/jquery.autocomplete.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/bootstrap-datetimepicker.min.css">
-
+ 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

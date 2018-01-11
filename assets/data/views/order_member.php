@@ -17,7 +17,7 @@ $query2 = mysql_query($sql2);
 	<!-- Main content -->
 	<section class="content">
 		<!-- Info boxes -->
-	
+
 		<?php
 		while ($data = mysql_fetch_array($query)) {
 			?>
@@ -35,11 +35,11 @@ $query2 = mysql_query($sql2);
 				
 				<div class="input-field col s12 m6">
 					<input id="alamat" type="text" class="validate" name="alamat">
-					<label for="alamat"><i class="eas-icon eas-ic_map_48px lg"></i> Tujuan Pengiriman Hasil</label>
+					<label for="alamat"><i class="fa fa-map"></i> Tujuan Pengiriman Hasil</label>
 				</div>
 				<div class="input-field col s12 m6">
 					<input type="date" name="tgl_ambil" class="datepicker">
-					<label><i class="eas-icon eas-ic_perm_contact_calendar_48px lg"></i> Deadline</label>
+					<label><i class="fa fa-calendar"></i> Deadline</label>
 				</div>
 				<div class="input-field col s12 m6">
 					<select name="jasa">
@@ -66,10 +66,10 @@ $query2 = mysql_query($sql2);
 							<option>BANK MEGA</option>
 							<option>BANK UNDI</option>
 						</select>
-						<label><i class="eas-icon eas-ic_attach_money_48px lg"></i> Bayar via</label>
+						<label><i class="fa fa-money"></i> Bayar via</label>
 					</div>
-					<a class="btn btn-flat waves-effect waves-light col m5 left s12" href="../../index.php" onclick="goBack()">Kembali</a>
-					<button type="submit" onclick="Materialize.toast('Order Berhasil', 4000)" class="btn blue darken-3 waves-effect waves-light col m5 s12 right">Order <i class="eas-icon eas-ic_send_48px lg"></i></button>
+					<a class="btn btn-flat waves-effect waves-light col m5 left s12"  onclick="goBack()">Kembali</a>
+					<button type="submit" onclick="Materialize.toast('Order Berhasil', 4000)" class="btn blue darken-3 waves-effect waves-light col m5 s12 right">Order <i class="fa fa-send right"></i></button>
 				</form>
 			</div>
 			<?php } ?>
@@ -78,84 +78,4 @@ $query2 = mysql_query($sql2);
 	</div>
 	<!-- /.content-wrapper -->
 	<?php 
-	include 'footer.php' ?>
-
-	<!-- jQuery 2.2.0 -->
-	<script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="../../component/js/materialize.min.js"></script>
-	<script type="text/javascript">
-		$('.tooltipped').tooltip({delay: 50});
-		$('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
-});
-		$('select').material_select();
-	</script>
-	<script type="text/javascript">
-		function getkey(e)
-		{
-			if (window.event)
-				return window.event.keyCode;
-			else if (e)
-				return e.which;
-			else
-				return null;
-		}
-		function angkadanhuruf(e, goods, field)
-		{
-			var angka, karakterangka;
-			angka = getkey(e);
-			if (angka == null) return true;
-
-			karakterangka = String.fromCharCode(angka);
-			karakterangka = karakterangka.toLowerCase();
-			goods = goods.toLowerCase();
-
-// check goodkeys
-if (goods.indexOf(karakterangka) != -1)
-	return true;
-// control angka
-if ( angka==null || angka==0 || angka==8 || angka==9 || angka==27 )
-	return true;
-
-if (angka == 13) {
-	var i;
-	for (i = 0; i < field.form.elements.length; i++)
-		if (field == field.form.elements[i])
-			break;
-		i = (i + 1) % field.form.elements.length;
-		field.form.elements[i].focus();
-		return false;
-	};
-// else return false
-return false;
-}
-</script>
-</script>
-<!-- Bootstrap 3.3.6 -->
-<!-- FastClick -->
-<script src="../plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script>
-<!-- Sparkline -->
-<script src="../plugins/sparkline/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- SlimScroll 1.3.0 -->
-<script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- ChartJS 1.0.1 -->
-<script src="../plugins/chartjs/Chart.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../dist/js/pages/dashboard2.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-<script type="text/javascript">
-	<script type="text/javascript">
-	function goBack() {
-		window.history.back();
-	}
-</script>
-</script>
-</body>
-</html>
+	include 'footer-member.php' ?>

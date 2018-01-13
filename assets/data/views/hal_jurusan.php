@@ -18,26 +18,12 @@ $query = mysql_query($sql);
 </head>
 <body>
 
-
-	<nav>
-		<div class="nav-wrapper blue darken-3">
-			<ul id="nav-mobile" class="left hide-on-med-and-down">
-				<li class="waves-effect waves-light"><a onclick="goBack()"><i class="fa fa-arrow-left"></i></a></li>
-			</ul>
-			<a onclick="goBack()" class="button-collapse"><i class="fa fa-arrow-left"></i></a>
-		</div>
-	</nav>
+	<?php 
+	include 'navbar.php';
+	?>
 	<div class="container-fluid">
-		<div class="row grey lighten-4">
-			<h6 class="col m12 s12">
-				<span class="fa-stack fa-lg fa-2x">
-					<i class="fa fa-stack-2x fa-circle" style="color: #1565c0;"></i>
-					<i class="fa fa-stack-1x fa-gears white-text"></i>
-				</span>
-				Lihat Jurusan
-			</h6>		
+		<div class="row">
 			<!-- baru -->
-			<img src="../dist/img/Kipli.png" class="owl-color tooltipped col m2 s6 offset-s3" data-position="top" data-delay="50" data-tooltip="Lihat dulu Jurusannya, baru order jasanya" >
 			<?php
 			while ($data = mysql_fetch_array($query)) {
 				?>

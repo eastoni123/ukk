@@ -1,50 +1,33 @@
-<nav>
-	<div class="nav-wrapper blue darken-3">
-		<img class="brand-logo" src="assets/component/img/logo.png" style="height: 50px; margin-top: 5px;">
-		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="">Beranda</a></li>
-			<li><a class="dropdown-button" href="" data-activates="drop-jurusan-desk">Lihat Bidang Keahlian</a></li>
-			<li><a href="assets/data/views/login-admin.php">Login</a></li>
-		</ul>
-		<ul class="side-nav collapsible" data-collapsible="accordion" id="mobile-demo">
-			<li><a href="">Beranda</a></li>
-			<li>
-				<div class="collapsible-header black-text waves-effect waves-dark">Lihat Bidang Keahlian</div>
-				<div class="collapsible-body black-text">
-					<ul>
-						<?php
-						$sql = "SELECT * FROM bidang";
-						$query = mysql_query($sql);
-						while ($data = mysql_fetch_array($query)) {
-							?>
-
-							<li><a class="black-text" href="assets/data/views/hal_jurusan.php?bidang=<?php echo $data['id_bidang']?>"><?php echo $data['nama_bidang']?></a></li>
-
-							<?php
-						}
-						?>
+<div class="container-fluid">
+	<div class="row z-depth-2 white">
+		<img src="../../component/img/logobiru.png" class="col m1 s4 offset-s4 offset-m1" style="height: auto;margin-top: 15px">
+		<div class="col m10 s12">
+			<div class="col m12 s12">
+				<div class="col m8 s12">
+					<h4 class="col m12 s12 center-align" style="font-family: LemonMilk">MESENJASA</h4>
+					<p class="col m12 s12 center-align" style="font-size: 10px">"Aplikasi Order Jasa Jurusan SMK"</p>
+				</div>
+				<a href="" class="btn blue col m2 s6 waves-effect" style="border-radius: 50px 0px 0px 50px;margin-top:2%">Gabung Sekarang</a>
+				<a href="" class="btn white blue-text col m2 s6 waves-effect" style="border-radius:0px 50px 50px 0px;margin-top:2%">Masuk</a>
+			</div>
+			<nav class="col m12 s12 transparent z-depth-0">
+				<div class="nav-wrapper">
+					<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars blue-text"></i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="../../../index.php" class="blue-text text-darken-3  hvr-underline-from-left">Beranda</a></li>
+						<li><a href="" class="blue-text text-darken-3  hvr-underline-from-left">Keunggulan Kami</a></li>
+						<li><a href="hal_jurusan.php?bidang=1" class="blue-text text-darken-3  hvr-underline-from-left">Lihat Jurusan</a></li>
+						<li><a href="" class="blue-text text-darken-3  hvr-underline-from-left">Cara Order</a></li>
 					</ul>
 				</div>
-			</li>
-			<li><a href="assets/data/views/login-admin.php">Login</a></li>
-		</ul>
+			</nav>
+		</div>
 	</div>
-</nav><!--NAVBAR-->
-<!--DROPDOWN-->
+</div><!--CONTAINER-->
 
-<ul id="drop-jurusan-desk" class="grey lighten-5 dropdown-content">
-	<li><a href="" class="disabled">Bidang</a></li>
-	<li class="divider"></li>
-	<?php
-	$sql = "SELECT * FROM bidang";
-	$query = mysql_query($sql);
-	while ($data = mysql_fetch_array($query)) {
-		?>
-
-		<li><a class="black-text" href="assets/data/views/hal_jurusan.php?bidang=<?php echo $data['id_bidang']?>"><?php echo $data['nama_bidang']?></a></li>
-
-		<?php
-	}
-	?>
+<ul id="slide-out" class="side-nav">
+	<li><a class="waves-effect" href="../../../index.php">Beranda</a></li>
+	<li><a class="waves-effect" href="#!">Keunggulan Kami</a></li>
+	<li><a class="waves-effect" href="hal_jurusan.php?bidang=1">Lihat Jurusan</a></li>
+	<li><a class="waves-effect" href="#!">Cara Order</a></li>
 </ul>

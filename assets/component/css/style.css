@@ -1,10 +1,4 @@
-@font-face {
-    font-family: 'Ubuntu R';
-    src:url('../fonts/Ubuntu-R.ttf');
-    font-weight: normal;
-    font-style: normal;
 
-}
 @font-face {
     font-family: 'LemonMilk';
     src:url('../fonts/LemonMilk.otf');
@@ -49,9 +43,6 @@
     border-bottom: 1px solid #2196f3 ;
     box-shadow: 0 1px 0 0 #2196f3 ;
 }
-body, html{
-	font-family:Ubuntu R;
-}
 .box-dash{
     margin-top: 20px;
 }
@@ -71,6 +62,38 @@ body, html{
 }
 #hov:hover{
     opacity: 1;
+}
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background:#2196f3;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
 }
 .avatar-admin{
     position: relative;
@@ -130,7 +153,7 @@ body, html{
     height: auto;
 }
 .owl{
- height: auto;
+   height: auto;
 }
 .photo-profile{
     height:auto;

@@ -15,7 +15,7 @@ $query = mysql_query($sql);
     <thead class="white-text">
       <tr>
         <th>Nama</th>
-        <th>Deadline</th>
+        <th>Tanggal</th>
         <th>Jasa</th>
         <th>Detail Jasa</th>
         <th>Bayar via</th>
@@ -30,7 +30,7 @@ $query = mysql_query($sql);
       ?>
       <tr class="white ">
         <td><?php echo $data['nama'] ?></td>
-        <td><?php echo $data['tgl_ambil'] ?></td>
+        <td><?php echo $data['tgl'] ?></td>
         <td><?php echo $data['jasa'] ?></td>
         <td><?php echo $data['orderan'] ?></td>
         <td><?php echo $data['bayar'] ?></td>

@@ -6,7 +6,10 @@ $password=$_POST['password'];
 $sql="SELECT * FROM `member` WHERE email='$email' AND password = '$password'";
 $query = mysql_query($sql) or die(mysql_error());
 if (mysql_num_rows($query) == 0 ) {
-	header("location:../../../index.php?Login=gagal");
+	echo "<script>";
+	echo "alert('Email atau password tidak ditemukan !!');";
+	echo "window.location='../../../index.php';";
+	echo "</script>";
 } else {
 	header("location:../views/dashboard-member.php");
 	$fetch = mysql_fetch_array($query);

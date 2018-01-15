@@ -11,7 +11,7 @@ $query =mysql_query($sql);
 		<table class="striped z-depth-1 bordered centered responsive-table blue darken-4 col m10">
 			<thead class="white-text">
 				<tr>
-					<th>Deadline</th>
+					<th>Tanggal</th>
 					<th>Jasa</th>
 					<th>Orderan</th>
 					<th>Bayar via</th>
@@ -23,7 +23,7 @@ $query =mysql_query($sql);
 			while ($data = mysql_fetch_array($query)) {
 				?>
 				<tr class="white ">
-					<td><?php echo $data['tgl_ambil'] ?></td>
+					<td><?php echo $data['tgl'] ?></td>
 					<td><?php echo $data['nama_jasa'] ?></td>
 					<td><?php echo $data['orderan'] ?></td>
 					<td><?php echo $data['bayar'] ?></td>

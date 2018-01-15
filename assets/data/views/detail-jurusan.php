@@ -8,11 +8,12 @@ $query = mysql_query($sql);
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>MESENJASA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/style.css">
+	<link rel="icon" href="../dist/img/mbiru.png">
 	<style type="text/css">
 	.photo-detail{
 		height:500px;
@@ -24,24 +25,10 @@ $query = mysql_query($sql);
 	}
 </style>
 </head>
-<body class="grey lighten-5">
-	<nav>
-		<div class="nav-wrapper blue darken-3">
-			<ul id="nav-mobile" class="left hide-on-med-and-down">
-				<li class="waves-effect waves-light"><a onclick="goBack()"><i class="fa fa-arrow-left"></i></a></li>
-			</ul>
-			<a onclick="goBack()" class="button-collapse"><i class="fa fa-arrow-left"></i></a>
-		</div>
-	</nav>
+<body>
+	<?php include 'navbar.php' ?>
 	<div class="container">
 		<div class="row">
-			<h6 class="col m12 s12">
-				<span class="fa-stack fa-lg fa-2x">
-					<i class="fa fa-stack-2x fa-circle" style="color: #1565c0;"></i>
-					<i class="fa fa-stack-1x fa-gears white-text"></i>
-				</span>
-				Detail Jurusan
-			</h6>	
 			<?php 
 			while ($data = mysql_fetch_array($query)) {
 				?>

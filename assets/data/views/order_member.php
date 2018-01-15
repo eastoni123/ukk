@@ -37,10 +37,7 @@ $query2 = mysql_query($sql2);
 					<input id="alamat" type="text" class="validate" name="alamat">
 					<label for="alamat"><i class="fa fa-map"></i> Tujuan Pengiriman Hasil</label>
 				</div>
-				<div class="input-field col s12 m6">
-					<input type="date" name="tgl_ambil" class="datepicker">
-					<label><i class="fa fa-calendar"></i> Deadline</label>
-				</div>
+				<input type="hidden" name="tgl" class="validate" value="<?php echo "" .date("d F, o") ?>">
 				<div class="input-field col s12 m6">
 					<select name="jasa">
 						<option value="" disabled selected>Pilih</option>

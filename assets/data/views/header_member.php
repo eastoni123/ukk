@@ -17,16 +17,17 @@ if(!isset($_SESSION['email'])){
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../component/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../component/css/material-design-iconic-font.min.css">
   <!-- Ionicons -->
   <!-- jvectormap -->
   <link rel="stylesheet" type="text/css" href="../../component/css/style.css">
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <link rel="icon" href="../dist/img/mbiru.png">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
     folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     <!-- autocomplete -->
- 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -42,7 +43,7 @@ if(!isset($_SESSION['email'])){
       <!-- Logo -->
       <a href="dashboard-member.php" class="logo blue darken-3">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><img src="../dist/img/owl.png" style="height: 35px; margin-top: 10px"></span>
+        <span class="logo-mini"><img src="../dist/img/mputih.png" style="height: 35px; margin-top: 10px"></span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><img class="brand-logo" src="../../component/img/logo.png" style="height: 30px; margin-top: 10px"></span>
       </a>
@@ -56,7 +57,7 @@ if(!isset($_SESSION['email'])){
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="nav-wrapper blue darken-3" style="height: 50px;">
         <!-- Sidebar toggle button-->
-        <i class="fa fa-bars waves-effect waves-light sidebar-toggle" data-toggle="offcanvas" role="button">
+        <i class="zmdi zmdi-menu sidebar-toggle waves-effect" data-toggle="offcanvas" role="button">
         </i>
         
       </nav>
@@ -83,12 +84,12 @@ if(!isset($_SESSION['email'])){
 
           <li class="active treeview">
             <a href="../views/dashboard-member.php" class="waves-effect waves-default">
-              <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
+              <i class="zmdi zmdi-home"></i> <span>Dashboard</span></i>
             </a>
           </li>
           <li class="treeview">
             <a href="" class="waves-effect waves-default">
-              <i class="fa fa-shopping-cart"></i><span>Order</span>
+              <i class="zmdi zmdi-shopping-cart"></i> <span>Order</span>
             </a>
             <ul class="treeview-menu">
               <?php
@@ -98,7 +99,7 @@ if(!isset($_SESSION['email'])){
                 ?>
                 <li>
                   <a href="../views/hal_jurusan_order.php?bidang=<?php echo $data['id_bidang']?>" class="waves-effect waves-default">
-                    <i class="fa fa-angle-right"></i><span><?php echo $data['nama_bidang']?></span>
+                    <i class="zmdi zmdi-angle-right"></i><span><?php echo $data['nama_bidang']?></span>
                   </a>
                 </li>
                 <?php
@@ -109,12 +110,12 @@ if(!isset($_SESSION['email'])){
 
           <li class="active treeview">
             <a href="../views/riwayat_order.php" class="waves-effect waves-default">
-              <i class="fa fa-history"></i> <span>Riwayat Order</span></i>
+              <i class="zmdi zmdi-time-restore"></i> <span>Riwayat Order</span></i>
             </a>
           </li>
           <li class="treeview">
             <a href="../proccess/logout.php" class="waves-effect waves-default">
-              <i class="fa fa-sign-out"></i> <span>Logout</span></i>
+              <i class="zmdi zmdi-power"></i> <span>Logout</span></i>
             </a>
           </li>
 

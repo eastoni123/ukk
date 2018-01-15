@@ -10,10 +10,6 @@ $query =mysql_query($sql);
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<h1>
-			<span class="fa-stack fa-lg fa-2x">
-				<i class="fa fa-stack-2x fa-circle" style="color: #1565c0;"></i>
-				<i class="fa fa-stack-1x fa-history white-text"></i>
-			</span>
 			Riwayat Order
 		</h1>
 	</section>
@@ -24,7 +20,7 @@ $query =mysql_query($sql);
 		<table class="striped z-depth-1 bordered centered responsive-table blue darken-4 col m10">
 			<thead class="white-text">
 				<tr>
-					<th>Deadline</th>
+					<th>Tanggal</th>
 					<th>Jasa</th>
 					<th>Orderan</th>
 					<th>Bayar via</th>
@@ -37,7 +33,7 @@ $query =mysql_query($sql);
 			while ($data = mysql_fetch_array($query)) {
 				?>
 				<tr class="white ">
-					<td><?php echo $data['tgl_ambil'] ?></td>
+					<td><?php echo $data['tgl'] ?></td>
 					<td><?php echo $data['nama_jasa'] ?></td>
 					<td><?php echo $data['orderan'] ?></td>
 					<td><?php echo $data['bayar'] ?></td>
@@ -47,11 +43,11 @@ $query =mysql_query($sql);
 						<?php
 						if($data['status'] == 1){
 							?>
-							<a href=""><i class="fa fa-check fa-2x green-text"></i></a>
+							<a href=""><i class="zmdi zmdi-check green-text" style="font-size: 30px"></i></a>
 							<?php
 						}else{
 							?>
-							<a href=""><i class="fa fa-close fa-2x red-text"></i></a>
+							<a href=""><i class="zmdi zmdi-close red-text" style="font-size: 30px"></i></a>
 							<?php
 						}
 

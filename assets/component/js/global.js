@@ -83,3 +83,4 @@ if (angka == 13) {
 // else return false
 return false;
 }
+

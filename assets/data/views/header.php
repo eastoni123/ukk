@@ -12,12 +12,13 @@ if(!isset($_SESSION['username']) && !isset($_SESSION['password'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="Aplikasi Order Jasa">
   <meta name="author" content="Muhammad Eastoni Maulana">
-  <title>E-Kita | <?php echo $_SESSION['nama_lengkap'] ?></title>
+  <title>MESENJASA | <?php echo $_SESSION['nama_lengkap'] ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="../../component/css/material-design-iconic-font.min.css">
   <link rel="stylesheet" type="text/css" href="../../component/css/style.css">
+  <link rel="icon" href="../dist/img/mbiru.png">
 </head>
 <body class="grey lighten-5">
   <!-- NAVBAR -->
@@ -43,8 +44,8 @@ if(!isset($_SESSION['username']) && !isset($_SESSION['password'])){
       </div>
     </li>
     <li><a href="dashboard.php" class="collapsible-header"><i class="zmdi zmdi-home"></i>Dashboard</a></li>
-    <li><a href="admin.php" class="collapsible-header"><i class="zmdi zmdi-account"></i>Data Admin</a></li>
     <li><a href="member.php" class="collapsible-header"><i class="zmdi zmdi-accounts"></i> Data Member</a></li>
+    <li><a href="keahlian.php" class="collapsible-header"><i class="zmdi zmdi-settings"></i> Bidang Keahlian dan Jurusan</a></li>
     <li>
       <a class="collapsible-header waves-effect"><i class="zmdi zmdi-shopping-cart"></i> Data Order</a>
       <ul class="collapsible-body">

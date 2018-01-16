@@ -7,7 +7,6 @@ $totalorder = mysql_query("SELECT COUNT(*) as total FROM `order`");
 ?>
 
 <div class="row">
-
   <div class="box-dash orange col m3 offset-m1 white-text z-depth-3" style="padding: 10px;">
     <h6 class="col m12 s12 right-align">Member</h6>
     <i class="zmdi zmdi-accounts col m2 s12 center-align" style="font-size: 100px"></i>
@@ -33,6 +32,7 @@ $totalorder = mysql_query("SELECT COUNT(*) as total FROM `order`");
     ?>
     <a href="total_order.php" style="border-radius: 50px;border: 1.5px solid white !important" class="transparent btn col m6 offset-m6 s12 waves-effect waves-light">Lihat</a>
   </div>
+  
 </div>
 
 

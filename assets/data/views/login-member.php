@@ -19,7 +19,7 @@ include "../connection/config.php";
 	?>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="white col m4 s12 z-depth-2" style="padding: 0px !important">
+			<div class="white col m4 offset-m4 s12 z-depth-2" style="padding: 0px !important">
 				<p class="col m12 s12 flow-text center-align blue white-text" style="margin-top: 0px;padding: 10px 0px">Silahkan Masuk</p>
 				<form class="col m12 s12" action="../proccess/proses_login_member.php" method="post">
 					<div class="input-field col s12 m12">

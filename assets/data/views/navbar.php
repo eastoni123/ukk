@@ -12,7 +12,7 @@
 			</div>
 			<nav class="col m12 s12 transparent z-depth-0">
 				<div class="nav-wrapper">
-					<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars blue-text"></i></a>
+					<a href="#" data-activates="slide-out" class="button-collapse"><i class="zmdi zmdi-menu blue-text"></i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a href="../../../index.php" class="blue-text text-darken-3  hvr-underline-from-left">Beranda</a></li>
 						<li><a href="" class="blue-text text-darken-3  hvr-underline-from-left">Keunggulan Kami</a></li>

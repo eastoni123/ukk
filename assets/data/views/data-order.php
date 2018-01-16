@@ -11,52 +11,45 @@ $query = mysql_query($sql);
 <!-- Info boxes -->
 <div class="row">
   <img src="../dist/img/Kipli.png" class="owl-color tooltipped col m2 s6 offset-s3" data-position="top" data-delay="50" data-tooltip="Halo <?php echo $_SESSION['nama_lengkap'] ?>" >
-  <table class="striped z-depth-1 bordered centered responsive-table blue darken-4 col m10">
-    <thead class="white-text">
-      <tr>
-        <th>Nama</th>
-        <th>Tanggal</th>
-        <th>Jasa</th>
-        <th>Detail Jasa</th>
-        <th>Bayar via</th>
-        <th>Jurusan</th>
-        <th>Bukti</th>
-        <th>Aksi</th>
 
-      </tr>
-    </thead>
-    <?php 
-    while ($data = mysql_fetch_array($query)) {
-      ?>
-      <tr class="white ">
-        <td><?php echo $data['nama'] ?></td>
-        <td><?php echo $data['tgl'] ?></td>
-        <td><?php echo $data['jasa'] ?></td>
-        <td><?php echo $data['orderan'] ?></td>
-        <td><?php echo $data['bayar'] ?></td>
-        <td><?php echo $data['namjur'] ?></td>
-        <td>
-          <?php
-          if($data['status'] == 1){
-            ?>
-            <a ><i class="zmdi zmdi-check green-text " style="font-size: 20px"></i></a>
-            <?php
-          }else{
-            ?>
-            <a ><i class="zmdi zmdi-close red-text " style="font-size: 20px"></i></a>
-            <?php
-          }
-
-          ?>
-        </td>
-        <td><a href="../proccess/hapus-order.php?hapus=<?php echo $data['id_order']?>" class=" col m12 waves-effect waves-light btn red darken-3" onclick="Materialize.toast('Hapus Berhasil', 4000)"><i class="fa fa-trash"></i> Hapus</a></td>
-      </tr>
-      <?php 
-    }
+  <?php while ($data = mysql_fetch_array($query)) 
+  {
     ?>
-  </table>  
+    <div class="col m3 s12 white z-depth-2" style="padding: 0px !important">
+      <div id="map" class="col m12 s12" style="height: 150px !important:" lat="<?php echo $data['lat'] ?>" lng="<?php echo $data['long'] ?>"></div>
+      <p class="col m12 s12"><i class="zmdi zmdi-account"></i> &nbsp;<?php echo $data['nama'] ?></p>
+      <p class="col m12 s12"><i class="zmdi zmdi-map"></i>&nbsp;<?php echo $data['alamat'] ?></p>
+    </div>
+    <?php 
+  }
+  ?>
 </div>
 
+
+<script>
+ function initMap() {
+  $('#map').each(function () {
+    let $this = $(this);
+    let lat = parseFloat($this.attr('lat'));
+    let lng = parseFloat($this.attr('lng'));
+
+    let location = {lat : lat, lng: lng};
+
+    let map = new google.maps.Map(document.getElementById($this.attr('id')), {
+      center: location,
+      zoom: 15
+    });
+
+    let marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      icon : '../../component/img/marker.png',
+    });
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9YAiRW38Sw4WMlwgroDcCP9e8DI3GuXE&libraries=places&callback=initMap"
+async defer></script>
 <?php 
 include 'footer-admin.php' ?>
 

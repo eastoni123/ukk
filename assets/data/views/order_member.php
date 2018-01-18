@@ -24,18 +24,18 @@ $query2 = mysql_query($sql2);
 			?>
 
 			<form class="col m6 offset-m3 white s12 z-depth-3" method="post" action="../proccess/proses_order.php" style="padding-bottom: 10px;padding-top: 0px; margin-top: 2%;">
-				<div class="blue darken-3 white-text center" style="padding:1px"><img class="brand-logo" src="../../component/img/logo.png" style="height: 40px; margin-top: 5px;"></div>
+				<div class="blue  white-text center" style="padding:1px"><img class="brand-logo" src="../../component/img/logo.png" style="height: 40px; margin-top: 5px;"></div>
 				<h5 class="center">Order</h5>
 				<h6 class="center">"<?php echo $data['nama_jurusan']; ?>"</h6>
 				<hr class="col m4 offset-m4 s4 offset-s4 blue lighten-3">
-				<input id="idm" type="hidden" class="validate" name="id_member" value="<?php echo $_SESSION['id_member'] ;?>">
+				<input id="idm" type="hidden" class="validate" name="id_member" value="<?php echo $_SESSION['id_member'] ;?>" >
 				<div class="input-field col s12 m12">
-					<input id="alamat" type="text" class="validate" name="alamat">
+					<input id="alamat" type="text" class="validate" name="alamat" required>
 					<label for="alamat"><i class="zmdi zmdi-map"></i> Tujuan Pengiriman Hasil</label>
 				</div>
 				<input type="hidden" class="validate" name="lat" id="lat">
 				<input type="hidden" class="validate" name="long" id="long">
-				<div id="map" class="col m12 s12"></div>
+				<div id="map" class="col m12 s12 z-depth-1"></div>
 				<input type="hidden" name="tgl" class="validate" value="<?php echo "" .date("d F, o") ?>">
 				<div class="input-field col s12 m6">
 					<select name="jasa">
@@ -52,7 +52,7 @@ $query2 = mysql_query($sql2);
 				</div>
 				<input type="hidden" class="validate" name="id" value="<?php echo $id ?>">
 				<div class="input-field col s12 m12">
-					<textarea class="materialize-textarea" id="apa" name="orderan"></textarea>
+					<textarea class="materialize-textarea" id="apa" name="orderan" required></textarea>
 					<label for="apa">Keterangan Order</label>
 				</div>
 				<div class="input-field col s12 m12">
@@ -69,7 +69,7 @@ $query2 = mysql_query($sql2);
 					<label><i class="zmdi zmdi-money"></i> Bayar via</label>
 				</div>
 				<a class="btn btn-flat waves-effect waves-light col m5 left s12"  onclick="goBack()">Kembali</a>
-				<button type="submit" onclick="Materialize.toast('Order Berhasil', 4000)" class="btn blue darken-3 waves-effect waves-light col m5 s12 right">Order <i class="zmdi zmdi-mail-send right"></i></button>
+				<button type="submit" class="btn blue  waves-effect waves-light col m5 s12 right">Order <i class="zmdi zmdi-mail-send right"></i></button>
 			</form>
 		</div>
 		<?php 

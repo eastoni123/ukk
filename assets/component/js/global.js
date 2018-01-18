@@ -1,4 +1,6 @@
 $(document).ready(function(){
+ // MODAL
+ $('.modal').modal();
 
 // SELECT
 $('select').material_select();
@@ -22,21 +24,32 @@ $('.datepicker').pickadate({
 	selectYears: 15
 });
 
+
+// DINAMIS DROPDOWN JURUSAN
+$("#bidang").change(function(){
+	var id_bidang = $("#bidang").val();
+	$.post("../../data/proccess/jurusan.php?jurusan="+id_bidang,
+		function(data,status){
+			$("#jurusan").empty();
+			$("#jurusan").append(data);
+			$("#jurusan").removeAttr("disabled");
+			$("select").material_select('update');
+		});
+});
+
 });
 // END DOCUMENT FUNCTION
 
-
-//BOX AKUN
-$('#kotak-akun').hide();
-var down = true;
-$('#btn-akun').click(function(){
-	if (down) {
-		down = false;
-		$('#kotak-akun').fadeIn();
-	}else{
-		down = true;
-		$('#kotak-akun').fadeOut();
-	}
+// DETAIL ORDER
+$(".view-det").click(function(){
+	var jasa = $(this).attr('jasa');
+	var det = $(this).attr('det');
+	var loc = $(this).attr('loc');
+	var bayar = $(this).attr('bayar');
+	$(".jasa").text(jasa);
+	$(".det").text(det);
+	$(".loc").text(loc);
+	$(".bayar").text(bayar);
 });
 
 //BACK TO PREVIOUS PAGE
@@ -44,7 +57,7 @@ function goBack() {
 	window.history.back();
 }
 
-// validasi angka huruf
+// VALIDASI ANGKA DAN HURUF
 function getkey(e)
 {
 	if (window.event)
@@ -83,4 +96,3 @@ if (angka == 13) {
 // else return false
 return false;
 }
-

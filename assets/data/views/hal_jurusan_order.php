@@ -23,16 +23,20 @@ $query = mysql_query($sql);
 	<section class="content">
 		<!-- Info boxes -->
 		<?php
-		while ($data = mysql_fetch_array($query)) {
+		while ($data = mysql_fetch_array($query)) 
+		{
 			?>
-			<div class="col s12 m4 offset-m1 white z-depth-2" style="padding: 10px; border-bottom:5px solid #0277bd; margin-top: 25px;">
-				<div class="bg-photo darken-4 center z-depth-2" style="background: url(../dist/img/<?php echo $data['foto_profil'] ?>);background-size: cover; ">
-					<div id="hov" >
-						<div class="avatar-admin" style="background: url(../dist/img/<?php echo $data['foto_profil'] ?>);background-size: cover; "></div>
-						<h5 class="center-align col m12 s12 white-text" style="position:relative;">"<?php echo $data['nama_jurusan']?>"</h5>
-						<a style="position: relative;" href="order_member.php?id=<?php echo $data['id_jurusan']; ?>" class="btn-view-delete-admin btn waves-effect waves-light transparent col m6 s6 offset-m3 offset-s3">Order</a>
-					</div>
+			<div class="col m3 offset-m1 s12 white z-depth-2" style="padding: 0px !important;margin-top: 20px">
+				<div class="col m12 s12" style="height: 245px;background: url(../dist/img/<?php echo $data['foto_profil'] ?>);background-position: center;background-repeat: no-repeat;background-size: cover;">
+
 				</div>
+
+				<div class="col m12 s12" style="margin-top: 1vh">
+					<h6 class="col m12 s12 grey-text">Jurusan :</h6>
+					<h5 class="col m12 s12" style="font-size: 18px;font-family: Roboto Light"><?php echo $data['nama_jurusan'] ?></h5>
+				</div>
+
+				<a href="order_member.php?id=<?php echo $data['id_jurusan'] ?>" class="btn waves-effect blue darken-2 col m12 s12">Order <i class="zmdi zmdi-shopping-cart right"></i></a>
 			</div>
 			<?php
 		}
@@ -44,4 +48,4 @@ $query = mysql_query($sql);
 <?php 
 include 'footer.php';
 include 'footer-member.php';
- ?>
+?>

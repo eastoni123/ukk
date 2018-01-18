@@ -12,6 +12,7 @@ $query = mysql_query($sql);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../component/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/style.css">
 	<link rel="icon" href="../dist/img/mbiru.png">
 	<style type="text/css">
@@ -64,6 +65,7 @@ $query = mysql_query($sql);
 		<!--JAVASCRIPT-->
 		<script type="text/javascript" src="../../component/js/jquery.min.js"></script>
 		<script type="text/javascript" src="../../component/js/global.js"></script>
+		<script type="text/javascript" src="../../component/js/parallax-scroll.js"></script>
 		<script type="text/javascript" src="../../component/js/materialize.min.js"></script>
 		<script type="text/javascript">
 			function goBack() {

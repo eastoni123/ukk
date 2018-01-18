@@ -17,7 +17,7 @@ $query =mysql_query($sql);
 	<!-- Main content -->
 	<section class="content">
 		<!-- Info boxes -->
-		<table class="striped z-depth-1 bordered centered responsive-table blue darken-4 col m10">
+		<table class="striped z-depth-1 bordered centered responsive-table blue  col m10">
 			<thead class="white-text">
 				<tr>
 					<th>Tanggal</th>
@@ -38,7 +38,7 @@ $query =mysql_query($sql);
 					<td><?php echo $data['orderan'] ?></td>
 					<td><?php echo $data['bayar'] ?></td>
 					<td><?php echo $data['nama_jurusan'] ?></td>
-					<td><a class="btn blue darken-4" href="hal_upload.php?id=<?php echo $data['id_order'] ?>">Upload</a></td>
+					<td><a class="btn blue " href="hal_upload.php?id=<?php echo $data['id_order'] ?>">Upload</a></td>
 					<td>
 						<?php
 						if($data['status'] == 1){

@@ -41,7 +41,7 @@ if(!isset($_SESSION['email'])){
     <header class="main-header" style="z-index: 999;">
 
       <!-- Logo -->
-      <a href="dashboard-member.php" class="logo blue darken-3">
+      <a href="dashboard-member.php" class="logo blue">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><img src="../dist/img/mputih.png" style="height: 35px; margin-top: 10px"></span>
         <!-- logo for regular state and mobile devices -->
@@ -55,7 +55,7 @@ if(!isset($_SESSION['email'])){
       }
       ?>
       <!-- Header Navbar: style can be found in header.less -->
-      <nav class="nav-wrapper blue darken-3" style="height: 50px;">
+      <nav class="nav-wrapper blue " style="height: 50px;">
         <!-- Sidebar toggle button-->
         <i class="zmdi zmdi-menu sidebar-toggle waves-effect" data-toggle="offcanvas" role="button">
         </i>
@@ -69,8 +69,8 @@ if(!isset($_SESSION['email'])){
       <!-- sidebar: style can be found in sidebar.less -->
       <section class="sidebar">
         <!-- Sidebar user panel -->
-        <div class="user-panel blue darken-3">
-          <div class="chip center white col m10 s10 blue darken-4 white-text">
+        <div class="user-panel blue ">
+          <div class="chip center white col m10 s10 blue darken-2 white-text">
             <img src="../dist/img/M.png" alt="Contact Person">
             <?php echo $nama; ?>
           </div>

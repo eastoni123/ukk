@@ -23,7 +23,8 @@ if(!isset($_SESSION['username']) && !isset($_SESSION['password'])){
 <body class="grey lighten-5">
   <!-- NAVBAR -->
   <nav>
-    <div class="nav-wrapper blue darken-3">
+    <div class="nav-wrapper blue">
+      <a href="#" class="brand-logo center"><img src="../dist/img/mputih.png" style="height: 60px"></a>
       <ul id="nav-mobile" >
         <li class="waves-effect waves-light button-collapse" data-activates="sidenav"><a><i class="zmdi zmdi-menu"></i></a></li>
       </ul>

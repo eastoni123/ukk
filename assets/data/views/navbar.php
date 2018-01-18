@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<div class="row z-depth-2 white">
+	<div class="row z-depth-2 white" id="navbar">
 		<img src="../../component/img/logobiru.png" class="col m1 s4 offset-s4 offset-m1" style="height: auto;margin-top: 15px">
 		<div class="col m10 s12">
 			<div class="col m12 s12">
@@ -15,7 +15,7 @@
 					<a href="#" data-activates="slide-out" class="button-collapse"><i class="zmdi zmdi-menu blue-text"></i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a href="../../../index.php" class="blue-text text-darken-3  hvr-underline-from-left">Beranda</a></li>
-						<li><a href="" class="blue-text text-darken-3  hvr-underline-from-left">Keunggulan Kami</a></li>
+						<li><a href="../../../index.php#keunggulan" class="blue-text text-darken-3  hvr-underline-from-left">Keunggulan Kami</a></li>
 						<li><a href="hal_jurusan.php?bidang=1" class="blue-text text-darken-3  hvr-underline-from-left">Lihat Jurusan</a></li>
 						<li><a href="" class="blue-text text-darken-3  hvr-underline-from-left">Cara Order</a></li>
 					</ul>
@@ -25,9 +25,12 @@
 	</div>
 </div><!--CONTAINER-->
 
+
 <ul id="slide-out" class="side-nav">
 	<li><a class="waves-effect" href="../../../index.php">Beranda</a></li>
 	<li><a class="waves-effect" href="#!">Keunggulan Kami</a></li>
 	<li><a class="waves-effect" href="hal_jurusan.php?bidang=1">Lihat Jurusan</a></li>
 	<li><a class="waves-effect" href="#!">Cara Order</a></li>
 </ul>
+<a href="#navbar" class="blue waves-effect waves-light btn-floating btn-large keatas ilang"><i style="font-size: 50px; " class="zmdi zmdi-chevron-up"></i></a>
+

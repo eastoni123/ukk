@@ -19,18 +19,19 @@ include "../connection/config.php";
 	?>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="white col m4 offset-m4 s12 z-depth-2" style="padding: 0px !important">
+			<div class="white col m4 offset-m4 s12 z-depth-2" style="padding: 0px !important;margin-top: 8vh;margin-bottom: 5vh">
 				<p class="col m12 s12 flow-text center-align blue white-text" style="margin-top: 0px;padding: 10px 0px">Silahkan Masuk</p>
 				<form class="col m12 s12" action="../proccess/proses_login_member.php" method="post">
 					<div class="input-field col s12 m12">
-						<input id="email" type="email" class="validate" name="email">
-						<label for="email" data-error="Email harus mengandung '@' yah 😊" data-success="Valid"><i class="zmdi zmdi-email"></i> Email</label>
+						<input id="email" type="email" class="validate" name="email" required data-error="Email harus mengandung '@' yah 😊" data-success="Valid">
+						<label for="email" ><i class="zmdi zmdi-email"></i> Email</label>
 					</div>
 					<div class="input-field col s12 m12">
-						<input id="pas" type="password" class="validate" name="password">
+						<input id="pas" type="password" class="validate" name="password" required>
 						<label for="pass"><i class="zmdi zmdi-lock"></i> Password</label>
 					</div>
-					<button type="submit" class=" blue btn waves-effect col m6 right">Masuk <i class="zmdi zmdi-mail-send right"></i></button>
+					<button type="submit" class=" blue btn waves-effect col m6 right">Masuk <i class="zmdi zmdi-sign-in right"></i></button>
+					<p class="col m12">Anda Admin ? | <a href="login-admin.php">MASUK</a></p>
 				</form>
 			</div>
 		</div>

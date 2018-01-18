@@ -15,7 +15,7 @@ include "../connection/config.php";
 		<!-- Info boxes -->
 		<form action="../proccess/proses_upload_bukti.php" method="post" enctype="multipart/form-data">
 			<div class="file-field input-field col s12 m8 offset-m2">
-				<div class="btn blue darken-4">
+				<div class="btn blue">
 					<span>Pilih File <i class="zmdi zmdi-camera right"></i></span>
 					<input type="file" name="file">
 				</div>
@@ -24,7 +24,7 @@ include "../connection/config.php";
 				</div>
 			</div>
 			<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
-			<button type="submit" name="upload" class="btn col m2 offset-m5 s12 blue darken-4">Kirim <i class="zmdi zmdi-mail-send right"></i></button>
+			<button type="submit" name="upload" class="btn col m2 offset-m5 s12 blue">Kirim <i class="zmdi zmdi-mail-send right"></i></button>
 		</form>
 	</section>
 	<!-- /.content -->

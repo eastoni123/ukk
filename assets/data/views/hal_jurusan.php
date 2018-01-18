@@ -5,6 +5,7 @@ $sql = "SELECT * FROM hal_jurusan WHERE kategori = $bidang";
 $query = mysql_query($sql);
 $sql2 = "SELECT * FROM bidang";
 $query2 = mysql_query($sql2);
+$query3 = mysql_query($sql)
 
 ?>
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ $query2 = mysql_query($sql2);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="../../component/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../component/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../component/css/swiper.min.css">
 	<link rel="icon" href="../dist/img/mbiru.png">
@@ -72,24 +74,27 @@ $query2 = mysql_query($sql2);
 				}
 				?>	
 			</div>
-			<div class="col m2 s12 white">
+			<div class="col m2 s12 white z-depth-1" style="margin-top: 20px">
 				<h6 class="col m12 s12 grey-text">Tag</h6>
 				<?php 
-				while ($data3 = mysql_fetch_array($query)) 
+				while ($data3 = mysql_fetch_array($query3)) 
 				{
 					?>
-					<a href="" class="col m1">AKU</a>
-					
-				</div>
-				<?php 
-			}
-			?>
+					<a href="detail-jurusan.php?id=<?php echo $data3['id_jurusan'] ?>" class="col m3">#<?php echo$data3['singkatan'] ?></a>
+					<?php 
+				}
+				?>
+			</div>
+
 		</div>
 	</div>
+
+	
 	<?php include 'footer.php' ?>
 	<!--JAVASCRIPT-->
 	<script type="text/javascript" src="../../component/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../../component/js/global.js"></script>
+	<script type="text/javascript" src="../../component/js/parallax-scroll.js"></script>
 	<script type="text/javascript" src="../../component/js/materialize.min.js"></script>
 	<script type="text/javascript" src="../../component/js/swiper.min.js"></script>
 	<script type="text/javascript">

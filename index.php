@@ -5,7 +5,7 @@ include ("assets/data/connection/config.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MESENJASA</title>
+	<title>HACKTOBERFEST</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="assets/component/css/materialize.min.css">
@@ -25,7 +25,7 @@ include ("assets/data/connection/config.php");
 						<hr class="col m6 offset-m3 s12">
 					</div>
 					<a href="" class="btn blue col m2 s6 waves-effect" style="border-radius: 50px 0px 0px 50px;margin-top:2%">Gabung Sekarang</a>
-					<a href="assets/data/views/login-member.php" class="btn white blue-text col m2 s6 waves-effect" style="border-radius:0px 50px 50px 0px;margin-top:2%">Masuk</a>
+					<a href="assets/data/views/login-member.php" class="btn white blue-text col m2 s6 waves-effect" style="border-radius:0px 50px 50px 0px;margin-top:2%">Melbu</a>
 				</div>
 				<nav class="col m12 s12 transparent z-depth-0">
 					<div class="nav-wrapper">

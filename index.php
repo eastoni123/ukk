@@ -5,7 +5,7 @@ include ("assets/data/connection/config.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MESENJASA</title>
+	<title>HACKTOBERFEST</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<!--CSS-->
 	<link rel="stylesheet" type="text/css" href="assets/component/css/materialize.min.css">
